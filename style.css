@@ -1,0 +1,342 @@
+/* ================= General Reset ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= Body & Background ================= */
+body {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8e0ff, #ffe6f8, #f0eaff);
+    color: #4b2d6a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+/* ================= Floating Stars ================= */
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: floatStars linear infinite;
+}
+
+@keyframes floatStars {
+    0% {
+        transform: translateY(100vh) translateX(0) scale(0.5);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) translateX(50px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* ================= Container ================= */
+.container {
+    background: #f3e8ff;
+    padding: 30px;
+    border-radius: 25px;
+    width: 95%;
+    max-width: 1100px;
+    box-shadow: 0px 12px 30px rgba(155, 89, 182, 0.25);
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= Headings ================= */
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    color: #7d3cff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+/* ================= Paragraphs ================= */
+p {
+    font-size: 1.2rem;
+    color: #8a4fff;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* ================= Navigation Buttons ================= */
+.movie-nav .btn, .top-links .btn, .hero-btn {
+    background: #9b59b6;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.movie-nav .btn:hover, .top-links .btn:hover, .hero-btn:hover {
+    background: #7d3cff;
+    box-shadow: 0 0 12px rgba(125, 60, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ================= Hero Section ================= */
+.movie-hero {
+    background: rgba(243, 229, 255, 0.95);
+    padding: 45px;
+    border-radius: 25px;
+    max-width: 750px;
+    margin: 20px auto;
+    box-shadow: 0px 15px 35px rgba(155, 89, 182, 0.3);
+    text-align: center;
+}
+
+/* ================= Tables ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 25px;
+    box-shadow: 0px 8px 20px rgba(155, 89, 182, 0.15);
+}
+
+th, td {
+    padding: 15px 18px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+th {
+    background: #a78bfa;
+    color: #4b2d6a;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background: #e6e0ff;
+}
+
+tr:hover {
+    background: #d1c4ff;
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* ================= Action Buttons ================= */
+.edit-btn, .delete-btn {
+    padding: 7px 14px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    margin: 0 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background: #b084ff;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background: #9b59b6;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.5);
+}
+
+.delete-btn {
+    background: #aa77ff;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background: #7d3cff;
+    box-shadow: 0 0 8px rgba(125, 60, 255, 0.5);
+}
+
+/* ================= Forms ================= */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.form label {
+    font-weight: 600;
+    color: #4b2d6a;
+    font-size: 1.1rem;
+}
+
+.form input, .form textarea, .form select {
+    padding: 12px;
+    border: 2px solid #b084ff;
+    border-radius: 18px;
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form input:focus, .form textarea:focus, .form select:focus {
+    border-color: #7d3cff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(125, 60, 255, 0.5);
+}
+
+/* ================= Back Link ================= */
+.back-link {
+    text-decoration: none;
+    color: #9b59b6;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: #7d3cff;
+    text-shadow: 0 0 6px rgba(125, 60, 255, 0.5);
+}
+
+/* ================= Footer ================= */
+.movie-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #8a4fff;
+    font-style: italic;
+}
+
+/* ================= Animations ================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= Container Glow on Hover ================= */
+.container:hover {
+    box-shadow: 0px 20px 50px rgba(155, 89, 182, 0.35);
+    transform: translateY(-5px);
+    transition: all 0.4s ease;
+}
+
+.container::after {
+    content: '✨';
+    position: absolute;
+    font-size: 1.2rem;
+    top: 10px;
+    right: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.container:hover::after {
+    opacity: 1;
+}
+
+/* ================= Responsive Design ================= */
+
+/* Large tablets and laptops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .movie-nav .btn, .top-links .btn, .hero-btn {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+
+    .form input, .form textarea, .form select {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #d1c4ff;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        display: block;
+        box-shadow: 0 2px 8px rgba(155, 89, 182, 0.1);
+        border-radius: 15px;
+    }
+
+    .movie-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .movie-nav .btn, .top-links .btn, .hero-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .edit-btn, .delete-btn {
+        width: 48%;
+        margin: 5px 1%;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.
+    }
+}
+
